@@ -1,8 +1,11 @@
 import React from 'react';
-import {SafeAreaView, View, StatusBar, useColorScheme} from 'react-native';
+import {View, StatusBar, useColorScheme} from 'react-native';
 import {Colors} from 'react-native/Libraries/NewAppScreen';
 import NavigatorsContainer from './src/Navigators/NavigatorsContainer';
-
+import Amplify from 'aws-amplify';
+import {withAuthenticator} from 'aws-amplify-react-native';
+import config from './src/aws-exports';
+Amplify.configure(config);
 const App = () => {
   const isDarkMode = useColorScheme() === 'dark';
 
@@ -19,4 +22,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default withAuthenticator(App);

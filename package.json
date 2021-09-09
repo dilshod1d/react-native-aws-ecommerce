@@ -10,11 +10,16 @@
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
   },
   "dependencies": {
+    "@react-native-async-storage/async-storage": "^1.15.7",
+    "@react-native-community/netinfo": "^6.0.2",
     "@react-native-picker/picker": "^2.0.0",
     "@react-navigation/bottom-tabs": "^6.0.5",
     "@react-navigation/native": "^6.0.2",
     "@react-navigation/native-stack": "^6.1.0",
     "@react-navigation/stack": "^6.0.7",
+    "amazon-cognito-identity-js": "^5.1.0",
+    "aws-amplify": "^4.2.8",
+    "aws-amplify-react-native": "^5.0.3",
     "react": "17.0.2",
     "react-id-generator": "^3.0.1",
     "react-native": "0.65.1",

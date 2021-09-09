@@ -5,6 +5,7 @@ import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import {colors} from '../global/styles';
 import HomeStack from './HomeStack';
 import CartStack from './CartStack';
+import MenuScreen from '../screens/MenuScreen';
 const Tab = createBottomTabNavigator();
 
 export default function BottomTab() {
@@ -12,8 +13,8 @@ export default function BottomTab() {
     <Tab.Navigator
       screenOptions={{
         headerShown: false,
-        tabBarInactiveTintColor: '#ffbd7d',
-        tabBarActiveTintColor: colors.orange,
+        tabBarInactiveTintColor: colors.darkblue,
+        tabBarActiveTintColor: colors.lightblue,
       }}>
       <Tab.Screen
         component={HomeStack}
@@ -30,6 +31,15 @@ export default function BottomTab() {
         options={{
           tabBarIcon: ({color}) => (
             <Entypo name="shopping-cart" color={color} size={25} />
+          ),
+        }}
+      />
+      <Tab.Screen
+        component={MenuScreen}
+        name="Menu"
+        options={{
+          tabBarIcon: ({color}) => (
+            <Entypo name="menu" color={color} size={25} />
           ),
         }}
       />

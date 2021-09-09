@@ -45,8 +45,10 @@ const Product = (props: ProductProps) => {
           <Text>{ratings}</Text>
         </View>
         <View style={styles.priceContainer}>
-          <Text style={styles.price}>{price}</Text>
-          {oldPrice && <Text style={styles.oldPrice}>{oldPrice}</Text>}
+          <Text style={styles.price}>{price.toFixed(2)}</Text>
+          {oldPrice && (
+            <Text style={styles.oldPrice}>{oldPrice.toFixed(2)}</Text>
+          )}
         </View>
       </View>
     </Pressable>
